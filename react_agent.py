@@ -38,7 +38,13 @@ def divide(a: int, b: int):
 
     return a // b
 
-tools = [add, substract, multiply, divide]
+@tool
+def mode(a: int, b: int):
+    """modulo"""
+
+    return a % b
+
+tools = [add, substract, multiply, divide, mode]
 
 model = ChatGoogleGenerativeAI(model="gemini-1.5-flash").bind_tools(tools)
 
