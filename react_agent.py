@@ -10,6 +10,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 load_dotenv()
 
 class AgentState(TypedDict):
+    ''' state is saved here'''
     messages: Annotated[Sequence[BaseMessage], add_messages]
 
 
