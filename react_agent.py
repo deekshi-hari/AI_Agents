@@ -32,7 +32,13 @@ def multiply(a: int, b: int):
 
     return a * b
 
-tools = [add, substract, multiply, ]
+@tool
+def divide(a: int, b: int):
+    """division"""
+
+    return a // b
+
+tools = [add, substract, multiply, divide]
 
 model = ChatGoogleGenerativeAI(model="gemini-1.5-flash").bind_tools(tools)
 
