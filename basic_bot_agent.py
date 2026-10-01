@@ -36,6 +36,7 @@ conversation_history = []
 
 user_input = input("You: ")
 while user_input != "exit":
+    print("Hello world!")
     conversation_history.append(HumanMessage(content=user_input))
     res = agent.invoke(
                 {"message": conversation_history}
